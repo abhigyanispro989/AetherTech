@@ -1,0 +1,2 @@
+const branchDestinations={"product-ai":"https://aether-ai.aether-dev.workers.dev","product-soft":"https://aethersoft-studio.aether-dev.workers.dev","product-labs":"https://aetherlabs.aether-dev.workers.dev"};
+document.querySelectorAll('.product-card').forEach(card=>{const branch=Object.keys(branchDestinations).find(name=>card.classList.contains(name));if(!branch)return;card.addEventListener('click',event=>{if(event.target.closest('a,button'))return;window.location.assign(branchDestinations[branch])})});
