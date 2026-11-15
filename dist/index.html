@@ -1,3 +1,4 @@
+Warning: fs was declared with const; use let for reassignable variables.
 <!doctype html>
 <html lang="en">
 <head><link rel="icon" type="image/png" sizes="256x256" href="assets/aethertech-favicon.png"><link rel="apple-touch-icon" href="assets/aethertech-favicon.png">
@@ -10,15 +11,15 @@
   <link rel="stylesheet" href="main-effects.css" />
   <link rel="stylesheet" href="brand.css" />
   <link rel="stylesheet" href="guide.css" />
-  <link rel="stylesheet" href="branch-navigation.css" />
+  <link rel="stylesheet" href="branch-navigation.css" /><link rel="stylesheet" href="theme-toggle.css">
 </head>
-<body>
+<body data-app-theme="dark" data-theme-mode="custom" data-theme-key="aethertech">
   <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="AetherTech home"><img class="brand-logo" src="assets/aethertech-logo.png" alt="AetherTech"></a>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
     <nav class="main-nav" aria-label="Main navigation"><a class="active" href="#top">Home</a><a href="#products">Products <span class="chevron">⌄</span></a><a href="#products">Solutions <span class="chevron">⌄</span></a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-    <div class="header-actions"><button class="icon-button search-open" aria-label="Search this page"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><span class="header-divider"></span><a class="button button-outline header-cta" href="#contact">Get started <span>↗</span></a></div>
+    <div class="header-actions"><button class="icon-button search-open" aria-label="Search this page"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><span class="header-divider"></span><button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to light theme" aria-pressed="false">☼ <span>Light</span></button><a class="button button-outline header-cta" href="#contact">Get started <span>↗</span></a></div>
   </header>
 
   <main id="top">
@@ -63,7 +64,7 @@
   <section class="guide-panel" id="guide-panel" aria-label="AetherTech site guide" aria-hidden="true"><header><span class="guide-orb">✦</span><span><b>AetherTech Guide</b><small>Product and site help</small></span><button id="guide-close" aria-label="Close guide">×</button></header><div class="guide-messages" id="guide-messages" aria-live="polite"><div class="guide-message assistant">Hi! I can help you find a branch, explore Learnova, or start a robotics project in Innocad.</div><div class="guide-quick"><button data-guide="Learnova">Learnova</button><button data-guide="Innocad robotics">Innocad</button><button data-guide="AetherSoft">AetherSoft</button></div></div><form id="guide-form"><input id="guide-input" aria-label="Ask the AetherTech guide" placeholder="What are you looking for?" autocomplete="off"><button aria-label="Send message">↑</button></form><div class="guide-note">Quick guidance based on AetherTech site information.</div></section><button class="guide-launch" id="guide-launch" aria-label="Open AetherTech guide" aria-expanded="false"><span>✦</span><i></i></button>
   <script src="script.js"></script>
   <script src="guide.js"></script>
-  <script src="branch-navigation.js"></script>
+  <script src="branch-navigation.js"></script><script src="theme-toggle.js"></script>
 </body>
 </html>
 
